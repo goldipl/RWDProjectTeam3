@@ -92,6 +92,17 @@ footer img {
   }
 }
 
+/* Brightness slider images*/
+.carousel-inner img {
+  filter: brightness(35%);
+}
+
+@media screen and (max-width: 760px) {
+  div.carousel {
+    display: none;
+  }
+}
+
 /*============= SECTION =============*/
 
 /* .narrow {
