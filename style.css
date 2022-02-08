@@ -1,5 +1,60 @@
+.light-mode {
+  --background-color: white;
+  --background-color-btn-second: lightgrey;
+  --background-color-btn: black;
+  --color: black;
+  --color-second: rgb(128, 255, 255);
+}
+
+.dark-mode {
+  --background-color: black;
+  --background-color-btn-second: rgb(44, 44, 44);
+  --background-color-btn: rgb(143, 143, 143);
+  --color: white;
+  --color-second: yellow;
+}
+
+.mode {
+  background-color: var(--background-color-btn);
+  border: 1px solid #91c9ff;
+  color: var(--color-second);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 200;
+  height: 40px;
+  outline: none;
+  transition: 2s ease-in-out;
+  width: 40px;
+}
+
+svg {
+  fill: none;
+  left: 0;
+  position: absolute;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  top: 0;
+  transition: 1s ease-in-out;
+}
+
+.mode:hover {
+  transition: 1s ease-in-out;
+  background: rgb(39, 50, 100);
+}
+
+.mode:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.mode span {
+  color: #91c9ff;
+  font-size: 24px;
+  font-weight: 200;
+}
+
 .navbar {
-  background-color: black;
+  background-color: var(--background-color);
   font-size: 0.9 rem;
   letter-spacing: 0.1rem;
   font-weight: bold;
@@ -14,7 +69,7 @@
 }
 
 .navbar .navbar-nav .nav-link {
-  color: white;
+  color: var(--color);
   padding-top: 0.6rem;
 }
 
@@ -32,23 +87,26 @@
 .caption h1 {
   font-size: 2 rem;
   font-weight: bold;
+  color: white;
 }
 
 .caption {
   width: 100%;
   position: absolute;
   top: 40%;
-  color: white;
+  color: var(--color);
   z-index: 1;
 }
 
 #course {
-  background-color: lightgrey;
+  background-color: var(--background-color-btn-second);
+  color: var(--color);
 }
 
 /*features*/
 .jumbotron {
-  color: black;
+  background-color: var(--background-color);
+  color: var(--color);
   padding-bottom: 0;
   margin-bottom: 0;
 }
@@ -68,16 +126,23 @@
   min-width: 15vw;
 }
 
+.clients {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
 /*contact - footer */
 footer,
 footer a {
-  color: darkgray;
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 footer a:hover,
 footer p,
 footer h3 {
-  color: black;
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 footer img {
