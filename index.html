@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/fixed.css" />
+    <link rel="stylesheet" href="css/form_main.css" />
+    <script src="js/form_validator.js"></script>
   </head>
-  <body>
+  <body class="light-mode">
     <!--- HOME KURS MOZLIWOSCI ZASOBY KLIENCI KONTAKT -->
 
     <!-- start HOME-->
@@ -50,6 +52,18 @@
               <a href="#contact" class="nav-link">KONTAKT</a>
             </li>
           </ul>
+          <button class="mode">
+            <svg
+              width="40px"
+              height="40px"
+              viewBox="0 0 40 40"
+              class="borderSvg"
+            >
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>&#9790;</span>
+          </button>
         </div>
       </nav>
 
@@ -143,6 +157,90 @@
       </div>
     </div>
     <!-- end RESOURCES-->
+
+    <!-- Start SLIDESHOW -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <h5>
+              Magnam laudantium nesciunt deleniti illo omnis voluptates neque ad
+              ex error assumenda vel, numquam sed vitae praesentium incidunt
+              eius! Iure, at impedit!
+            </h5>
+          </div>
+          <img
+            class="d-block h-100 w-100"
+            src="img/slide1.jpg"
+            alt="First slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <h5>
+              Magnam laudantium nesciunt deleniti illo omnis voluptates neque ad
+              ex error assumenda vel, numquam sed vitae praesentium incidunt
+              eius! Iure, at impedit!
+            </h5>
+          </div>
+          <img
+            class="d-block h-100 w-100"
+            src="img/slide2.jpg"
+            alt="Second slide"
+          />
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <h5>
+              Magnam laudantium nesciunt deleniti illo omnis voluptates neque ad
+              ex error assumenda vel, numquam sed vitae praesentium incidunt
+              eius! Iure, at impedit!
+            </h5>
+          </div>
+          <img
+            class="d-block h-100 w-100"
+            src="img/slide3.jpg"
+            alt="Third slide"
+          />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- End SLIDESHOW -->
+
     <!-- start CLIENTS-->
     <div class="clients">
       <div class="heading col-12">
@@ -196,6 +294,7 @@
     </div>
  
     <!--end CLIENTS-->
+
     <!-- start Team -->
     
        <div id="team">
@@ -320,6 +419,48 @@
     </div>
   <hr></div>
     <!-- end Team -->
+
+    <!-- start FORM -->
+    <div class="container-contact3">
+      <div class="wrap-contact3">
+        <form class="contact3-form">
+          <span class="contact3-form-title">Formularz kontaktowy</span>
+          <div class="wrap-input3">
+            <input
+              class="input3"
+              type="text"
+              name="name"
+              placeholder="Imię i nazwisko"
+            />
+            <span class="focus-input3"></span>
+          </div>
+          <div class="wrap-input3">
+            <input
+              class="input3"
+              type="text"
+              name="email"
+              id="emailInput"
+              placeholder="Twój Email"
+              onkeyup="validateEmail(this)"
+            />
+            <span class="focus-input3"></span>
+          </div>
+          <div class="wrap-input3">
+            <textarea
+              class="input3"
+              name="message"
+              placeholder="Treść wiadomości"
+            ></textarea>
+            <span class="focus-input3"></span>
+          </div>
+          <div class="container-contact3-form-btn">
+            <button class="contact3-form-btn">Wyślij</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end FORM-->
+
     <!-- start CONTACT -->
     <div id="contact">
       <footer>
@@ -342,6 +483,7 @@
     <!--end CONTACT-->
     <!--- Script Source Files -->
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/darkMode.js"></script>
     <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
     <!--- End of Script Source Files -->
