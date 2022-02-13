@@ -68,7 +68,7 @@
   font-weight: bold;
 }
 
-.navbar-brand > img {
+.navbar-brand>img {
   height: 1.8rem;
 }
 
@@ -134,10 +134,99 @@
   min-width: 15vw;
 }
 
+
+/*team*/
+.members h2{
+  margin-top: 1vw;
+}
+.teamMember {
+  height: 20vw;
+  width: 20vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.teamMember.biazar {
+  background-image: url(img/reza-biazar.jpg);
+}
+.teamMember.minakov {
+  background-image: url(img/aleksandr-minakov.jpg);
+}
+.teamMember.dera {
+  background-image: url(img/albert-dera.jpg);
+}
+.teamMember.nackos {
+  background-image: url(img/jake-nackos.jpg);
+}
+.teamMember.koletic {
+  background-image: url(img/jurica-koletic.jpg);
+}
+.teamMember.dwivedi {
+  background-image: url(img/swapnil-dwivedi.jpg);
+}
+.teamMember p {
+  height: 20vw;
+  width: 20vw;
+  color: white;
+padding: 2vw;
+display: table-cell;
+  vertical-align: middle;
+  background-color: #000;
+border-radius: 20%;
+  opacity: 0;
+  transition: opacity .5s;
+  font-size: 0;
+}
+
+.teamMember:hover p{
+  opacity: .9;
+  font-size: 1rem;
+}
+
+
+.joinUs {
+
+  background-color: black;
+  padding: 10px;
+ width: 95%;
+ min-height: 20vw;
+  margin: 0 auto;
+  border-radius: 60px;
+color: white;
+}
+.joinUs hr {
+  border-color: white;
+  width: 95%;
+  opacity: .5;
+}
+
+.joinUs button {
+  background-color:goldenrod;
+  border: gold;
+  color: black;
+}
+.joinUs button:hover {
+  background-color:white;
+  color: black;
+}
+.joinUs input:focus {
+  box-shadow:  0 0 1px 3px goldenrod;
+  border: grey;
+}
+.members h2+p {
+  display: none;
+}
+
+
+
 .clients {
   background-color: var(--background-color);
   color: var(--color);
 }
+
 
 /*contact - footer */
 footer,
@@ -163,7 +252,54 @@ footer img {
   .client {
     width: 50%;
   }
+  .members h2{
+    font-size: 2rem;
+  }
+  .members h2+p {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .teamMember {
+    height: 80vw;
+    width: 80vw;
+  }
+  .teamMember:hover p{
+    display: none;
+  }
 }
+
+@media screen and (min-width: 768px) and (max-width: 940px) {
+  
+  .teamMember:hover p{
+    opacity: 0;
+  }
+  .members h2{
+    font-size: 1.3rem;
+  }
+  .members h2+p {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 941px) and (max-width: 1239px) {
+ 
+  .members h2{
+    font-size: 1.5rem;
+  }
+
+}
+
+
+@media screen and (min-width: 1240px){
+ 
+  .members h2{
+    font-size: 2rem;
+  }
+  .teamMember:hover p{
+    font-size: 1.3rem;
+  }
+}
+
 
 /* Brightness slider images*/
 .carousel-inner img {
@@ -175,6 +311,7 @@ footer img {
     display: none;
   }
 }
+
 
 /*============= SECTION =============*/
 
